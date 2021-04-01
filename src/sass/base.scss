@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color:#21243D;
+  font-size: 14px;
+  font-family: $fontFamily, sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  @media (max-width: $md1+px) {
+    max-width: 970px;
+  }
+  @media (max-width: $md2+px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+.text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23 / 16 *100%;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 60 / 44 * 100%;
+  @media (max-width: $md3 +px) {
+    font-size: 32px;
+  }
+}
+
+%ibg{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  height: 47px;
+  outline: none;
+  cursor: pointer;
+  padding: 0 20px;
+  background-color: #ff6464;
+  transition: background-color 0.2s linear;
+  border-radius: 2px;
+  border-style: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29 / 20 * 100%;
+  color: #ffffff;
+  @media (min-width: $md3 +px){
+    &:hover{
+      background-color: #da2f2f;
+    }
+  }
+}
